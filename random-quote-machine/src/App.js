@@ -27,12 +27,20 @@ function App() {
     {
       quote: 'None of us is as smart as all of us.',
       author: '- Ken Blanchard'
+    },
+    {
+      quote: "I believe we are here on the planet Earth to live, grow up and do what we can to make this world a better place for all people to enjoy freedom.",
+      author: '-Rosa Parks'
     }
   
   ];
+  let randomIndex = () =>{
+   return Math.floor(Math.random() * quotes.length)
+  }
+  let index = randomIndex();
   return (
-    <div className="App">
-      <QuoteBox />
+    <div className="App container-fluid d-flex justify-content-center">
+      <QuoteBox quote={quotes[index].quote} author={quotes[index].author} />
     </div>
   );
 }
