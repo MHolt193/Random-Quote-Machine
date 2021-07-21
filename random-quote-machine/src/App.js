@@ -1,5 +1,6 @@
 import QuoteBox from './Components/QuoteBox';
-import './index.css'
+import './App.css';
+
 function App() {
   const quotes = [
     {
@@ -40,11 +41,13 @@ function App() {
   }
   let index = randomIndex();
   
+  
   return (
     <div className="App container-fluid d-flex justify-content-center">
-      <QuoteBox quote={quotes[index].quote} author={quotes[index].author} />
+      <QuoteBox  quotes={quotes} quote={quotes[index].quote} author={quotes[index].author} />
     </div>
   );
 }
 
 export default App;
+
