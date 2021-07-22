@@ -1,4 +1,5 @@
 import QuoteBox from './Components/QuoteBox';
+import Footer from './Components/Footer';
 import './App.css';
 
 function App() {
@@ -45,6 +46,7 @@ function App() {
   return (
     <div className="App container-fluid d-flex justify-content-center">
       <QuoteBox  quotes={quotes} quote={quotes[index].quote} author={quotes[index].author} />
+      <Footer />
     </div>
   );
 }
